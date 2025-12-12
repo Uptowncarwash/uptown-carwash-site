@@ -8,7 +8,7 @@ Static website for Uptown Car Wash, a full-service car wash and detailing busine
 - **Address**: 4157 Normal St, San Diego, CA 92103
 - **Phone**: (619) 297-9274
 - **Email**: uptowncarwashsd@gmail.com
-- **Domain**: uptowncarwash.com
+- **Domain**: uptowncarwashsandiego.com
 
 ## Tech Stack
 - Static HTML/CSS/JavaScript (no framework)
@@ -99,5 +99,5 @@ Static website for Uptown Car Wash, a full-service car wash and detailing busine
 ## Deployment Notes
 - **Recommended hosting**: Netlify
 - **Enable**: HTTPS/SSL
-- **CMS admin**: uptowncarwash.com/admin
+- **CMS admin**: uptowncarwashsandiego.com/admin
 - **Post-launch**: Submit sitemap.xml to Google Search Console
