@@ -1,0 +1,13 @@
+{
+  "name": "uptown-carwash-site",
+  "version": "1.0.0",
+  "description": "Uptown Car Wash San Diego website",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve",
+    "start": "npx @11ty/eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

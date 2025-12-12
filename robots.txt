@@ -1,0 +1,13 @@
+# Robots.txt for Uptown Car Wash
+# https://uptowncarwash.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://uptowncarwash.com/sitemap.xml
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /_site/
+Disallow: /src/

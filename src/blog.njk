@@ -1,0 +1,146 @@
+---
+permalink: /blog/index.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Car Care Blog | Uptown Car Wash San Diego</title>
+  <meta name="description" content="Expert car care tips, detailing advice, and news from Uptown Car Wash - San Diego's trusted full-service car wash since 1988.">
+  <meta name="keywords" content="car wash tips, car detailing San Diego, auto care advice, car maintenance">
+
+  <meta property="og:title" content="Car Care Blog | Uptown Car Wash San Diego">
+  <meta property="og:description" content="Expert car care tips and detailing advice from San Diego's trusted car wash since 1988.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/index.html" class="logo">
+        <img src="/Final_Colour.png" alt="Uptown Car Wash San Diego" class="logo-large">
+      </a>
+
+      <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="/about.html">ABOUT</a></li>
+          <li class="nav-item"><a href="/car-wash-services.html">CAR WASH</a></li>
+          <li class="nav-item"><a href="/detailing-services.html">DETAILING</a></li>
+          <li class="nav-item"><a href="/gift-cards.html">GIFT CARDS</a></li>
+          <li class="nav-item"><a href="/unlimited-wash.html">WASH CLUB</a></li>
+          <li class="nav-item"><a href="/memberships.html">MEMBERSHIPS</a></li>
+          <li class="nav-item"><a href="/blog/" class="active">BLOG</a></li>
+          <li class="nav-item"><a href="/contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <a href="/free-wash.html" class="btn btn-primary header-cta">FREE WASH</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Car Care Blog</h1>
+        <p>Tips, tricks, and news from San Diego's trusted car wash since 1988</p>
+      </div>
+    </section>
+
+    <!-- Blog Listing -->
+    <section class="blog-listing">
+      <div class="container">
+        <div class="blog-grid">
+          {% for post in collections.posts %}
+          <article class="blog-card">
+            <a href="{{ post.url }}" class="blog-card-image">
+              <img src="/{{ post.data.featured_image }}" alt="{{ post.data.title }}">
+            </a>
+            <div class="blog-card-content">
+              <span class="blog-card-date">{{ post.data.date | dateFormat }}</span>
+              <h2 class="blog-card-title">
+                <a href="{{ post.url }}">{{ post.data.title }}</a>
+              </h2>
+              <p class="blog-card-excerpt">{{ post.data.excerpt }}</p>
+              <a href="{{ post.url }}" class="blog-card-link">Read More &rarr;</a>
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready for a Professional Wash?</h2>
+        <p>Experience the Uptown difference - San Diego's trusted car wash since 1988.</p>
+        <a href="/free-wash.html" class="btn btn-primary">Get Your Free Wash</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="/Final_Colour.png" alt="Uptown Car Wash" class="footer-logo">
+          <p>San Diego's trusted car wash and detailing service since 1988.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/car-wash-services.html">Car Wash</a></li>
+            <li><a href="/detailing-services.html">Detailing</a></li>
+            <li><a href="/unlimited-wash.html">Wash Club</a></li>
+            <li><a href="/blog/">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <address>
+            <p>4157 Normal St</p>
+            <p>San Diego, CA 92103</p>
+            <p><a href="tel:+16192979274">(619) 297-9274</a></p>
+          </address>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="/terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Uptown Car Wash. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('nav-open');
+        mobileMenuBtn.setAttribute('aria-expanded',
+          mobileMenuBtn.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
+        );
+      });
+    }
+  </script>
+</body>
+</html>

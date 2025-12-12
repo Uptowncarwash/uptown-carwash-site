@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO META TAGS -->
+  <title>{{ title }} | Uptown Car Wash San Diego</title>
+  <meta name="description" content="{{ description }}">
+  <meta name="keywords" content="{{ keywords }}">
+  <meta name="author" content="Uptown Car Wash">
+
+  <!-- Open Graph for social sharing -->
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://uptowncarwash.com/{{ featured_image }}">
+  <meta property="article:published_time" content="{{ date | isoDate }}">
+  <meta property="article:author" content="Uptown Car Wash">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/index.html" class="logo">
+        <img src="/Final_Colour.png" alt="Uptown Car Wash San Diego" class="logo-large">
+      </a>
+
+      <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="/about.html">ABOUT</a></li>
+          <li class="nav-item"><a href="/car-wash-services.html">CAR WASH</a></li>
+          <li class="nav-item"><a href="/detailing-services.html">DETAILING</a></li>
+          <li class="nav-item"><a href="/gift-cards.html">GIFT CARDS</a></li>
+          <li class="nav-item"><a href="/unlimited-wash.html">WASH CLUB</a></li>
+          <li class="nav-item"><a href="/memberships.html">MEMBERSHIPS</a></li>
+          <li class="nav-item"><a href="/blog/" class="active">BLOG</a></li>
+          <li class="nav-item"><a href="/contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <a href="/free-wash.html" class="btn btn-primary header-cta">FREE WASH</a>
+    </div>
+  </header>
+
+  <main>
+    <article class="blog-post">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="/index.html">Home</a> &rsaquo;
+          <a href="/blog/">Blog</a> &rsaquo;
+          <span>{{ title }}</span>
+        </nav>
+
+        <header class="blog-post-header">
+          <h1>{{ title }}</h1>
+          <div class="blog-post-meta">
+            <span class="blog-post-date">{{ date | dateFormat }}</span>
+            <span class="blog-post-author">By Uptown Car Wash Team</span>
+          </div>
+        </header>
+
+        {% if featured_image %}
+        <div class="blog-post-image">
+          <img src="/{{ featured_image }}" alt="{{ title }}">
+        </div>
+        {% endif %}
+
+        <div class="blog-post-body">
+          {{ content | safe }}
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="/blog/" class="btn btn-secondary">&larr; Back to Blog</a>
+        </footer>
+      </div>
+    </article>
+
+    <!-- Related Posts -->
+    <section class="related-posts">
+      <div class="container">
+        <h2>More Articles</h2>
+        <div class="blog-grid">
+          {% set otherPosts = collections.posts | reject("page.url", page.url) %}
+          {% for post in collections.posts | limit(2) %}
+          {% if post.url !== page.url %}
+          <article class="blog-card">
+            <a href="{{ post.url }}" class="blog-card-image">
+              <img src="/{{ post.data.featured_image }}" alt="{{ post.data.title }}">
+            </a>
+            <div class="blog-card-content">
+              <h3 class="blog-card-title">
+                <a href="{{ post.url }}">{{ post.data.title }}</a>
+              </h3>
+              <a href="{{ post.url }}" class="blog-card-link">Read More &rarr;</a>
+            </div>
+          </article>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="/Final_Colour.png" alt="Uptown Car Wash" class="footer-logo">
+          <p>San Diego's trusted car wash and detailing service since 1988.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/car-wash-services.html">Car Wash</a></li>
+            <li><a href="/detailing-services.html">Detailing</a></li>
+            <li><a href="/unlimited-wash.html">Wash Club</a></li>
+            <li><a href="/blog/">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <address>
+            <p>4157 Normal St</p>
+            <p>San Diego, CA 92103</p>
+            <p><a href="tel:+16192979274">(619) 297-9274</a></p>
+          </address>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="/terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Uptown Car Wash. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('nav-open');
+        mobileMenuBtn.setAttribute('aria-expanded',
+          mobileMenuBtn.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
+        );
+      });
+    }
+  </script>
+</body>
+</html>

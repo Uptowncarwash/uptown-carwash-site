@@ -1,0 +1,39 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Reference files (saved copies of original site)
+webpage1.html
+webpage1_files/
+Uptown Carwash _ Full-Service Car Detailers1.html
+Uptown Carwash _ Full-Service Car Detailers1_files/
+
+# Screenshot references
+uptownwebpage*.png
+
+# Build artifacts
+_site/
+.cache/
+
+# Netlify
+.netlify/
+
+# Node
+node_modules/
+npm-debug.log
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# Archives
+*.zip
