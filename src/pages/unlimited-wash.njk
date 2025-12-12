@@ -1,0 +1,79 @@
+﻿---
+layout: layouts/base.njk
+title: Unlimited Wash Club
+description: Uptown Car Wash Unlimited Wash Club - Wash as often as you like from $29.99/month. Half off your first month. No long-term contract.
+permalink: /unlimited-wash/
+---
+
+<section class="page-hero">
+  <div class="container">
+    <h1>{{ memberships.intro.title }}</h1>
+    <p>{{ memberships.intro.subtitle }}</p>
+  </div>
+</section>
+
+<section class="benefits-section">
+  <div class="container">
+    <div class="benefits-grid">
+      {% for benefit in memberships.intro.benefits %}
+      <div class="benefit-item">
+        <div class="benefit-icon">{{ benefit.icon | safe }}</div>
+        <h3>{{ benefit.title }}</h3>
+        <p>{{ benefit.desc }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="services-pricing">
+  <div class="container">
+    <h2>Choose Your Plan</h2>
+    <div class="pricing-grid membership-grid">
+      {% for plan in memberships.plans %}
+      <div class="pricing-card{% if plan.featured %} featured{% endif %}">
+        {% if plan.badge %}<div class="pricing-badge">{{ plan.badge }}</div>{% endif %}
+        <h3>{{ plan.name }}</h3>
+        <div class="price">{{ plan.price }}<span>/mo</span></div>
+        <div class="first-month">First month: {{ plan.first_month }}</div>
+        <ul class="pricing-features">
+          {% for feature in plan.features %}
+          <li>{{ feature }}</li>
+          {% endfor %}
+        </ul>
+        {% if plan.stripe_link %}
+        <a href="{{ plan.stripe_link }}" class="btn {% if plan.featured %}btn-primary{% else %}btn-secondary{% endif %}">SIGN UP</a>
+        {% else %}
+        <a href="/contact/" class="btn {% if plan.featured %}btn-primary{% else %}btn-secondary{% endif %}">SIGN UP</a>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="how-it-works">
+  <div class="container">
+    <h2>How It Works</h2>
+    <div class="steps-grid">
+      {% for step in memberships.how_it_works %}
+      <div class="step">
+        <div class="step-number">{{ step.step }}</div>
+        <h3>{{ step.title }}</h3>
+        <p>{{ step.desc }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="cta-area">
+  <div class="container">
+    <h2>Ready to Join?</h2>
+    <p>Stop by today to sign up for your Unlimited Wash Club membership</p>
+    <div class="cta-buttons">
+      <a href="{{ settings.maps_url }}" class="btn btn-primary" target="_blank">GET DIRECTIONS</a>
+      <a href="tel:{{ settings.phone_link }}" class="btn btn-secondary">CALL {{ settings.phone }}</a>
+    </div>
+  </div>
+</section>

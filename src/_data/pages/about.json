@@ -1,0 +1,36 @@
+﻿{
+  "title": "About Us",
+  "subtitle": "Family-owned and operated since 1988",
+  "our_story": {
+    "heading": "Our Story",
+    "paragraphs": [
+      "Uptown Car Wash & Detail Center is a locally owned, family-operated business proudly serving San Diego since 1988. For more than 35 years, we've remained committed to delivering exceptional service, quality care, and a superior clean for every vehicle that comes through our doors.",
+      "As one of the last true full-service car washes in San Diegoâ€”and an award-winning oneâ€”we continue to uphold the tradition of hands-on service. Many of our team members have been with us for over 20 years, and our General Manager brings 40+ years of industry experience, ensuring every customer receives expert-level attention and care."
+    ]
+  },
+  "hybrid_wash": {
+    "heading": "A Modern Hybrid Wash Experience",
+    "intro": "In 2021, we upgraded our facility with state-of-the-art, eco-conscious equipment designed to provide the safest and most effective wash possible. Our hybrid system combines:",
+    "features": [
+      "Touchless high-pressure water for gentle, precise cleaning",
+      "Soft neoprene, high-density foam brushes that won't hold dirt or grit",
+      "A rich foam bath using eco-friendly, non-caustic soaps",
+      "Dual drying with high-power blowers plus hand towel drying"
+    ],
+    "conclusion": "This unique approach delivers a deeper clean while protecting your paint, finish, and overall vehicle condition."
+  },
+  "services": {
+    "express": {"heading": "Express Exterior Services", "items": ["Drive-through exterior wash", "Triple-foam polish", "Ceramic and graphene spray protectants", "Tire shine & wheel cleaning", "Spot-free rinse and air dry, towel dry with microfiber towels by hand"]},
+    "full_service": {"heading": "Full-Service Washes", "items": ["Interior vacuuming of floors and seats", "Window cleaning inside and out", "Dusting of the dashboard and center console", "Door-jamb wiping", "Hand towel drying with soft microfiber towels"]},
+    "detailing": {"heading": "Professional Detailing Services", "items": ["Full interior & exterior detailing", "Paint correction", "Clay bar treatments", "Machine polishing & waxing", "Ceramic coatings", "Graphene coatings", "Carpet & upholstery shampooing", "Leather cleaning, restoration & conditioning", "Deep interior detailing"]}
+  },
+  "differentiators": {
+    "heading": "What Sets Us Apart",
+    "items": ["Family-owned and operated for 35+ years", "Award-winning customer service", "One of San Diego's last full-service car washes", "Hybrid wash system with touchless and soft-foam technology", "Eco-friendly, non-caustic cleaning products", "Experienced staff with decades of combined expertise", "Specialized care for all vehicle types, finishes, and interiors"]
+  },
+  "images": [
+    {"src": "uptown-building-1.jpg", "alt": "Uptown Car Wash San Diego - Street View"},
+    {"src": "uptown-building-2.jpg", "alt": "Uptown Car Wash Mural and Entrance"},
+    {"src": "uptown-building-3.jpg", "alt": "Uptown Car Wash Building and Wash Bay"}
+  ]
+}

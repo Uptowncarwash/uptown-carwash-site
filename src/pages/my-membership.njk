@@ -1,0 +1,37 @@
+﻿---
+layout: layouts/base.njk
+title: My Membership
+description: Manage your Uptown Car Wash membership.
+permalink: /my-membership/
+---
+
+<section class="page-hero">
+  <div class="container">
+    <h1>My Membership</h1>
+    <p>Manage your Unlimited Wash Club account</p>
+  </div>
+</section>
+
+<section class="my-membership-content">
+  <div class="container">
+    <div class="membership-manage-card">
+      <h2>Membership Management</h2>
+      <p>To manage your membership, please contact us:</p>
+      <div class="manage-options">
+        <div class="manage-option">
+          <h3>By Phone</h3>
+          <a href="tel:{{ settings.phone_link }}" class="btn btn-primary">{{ settings.phone }}</a>
+        </div>
+        <div class="manage-option">
+          <h3>By Email</h3>
+          <a href="mailto:{{ settings.email }}" class="btn btn-secondary">{{ settings.email }}</a>
+        </div>
+        <div class="manage-option">
+          <h3>In Person</h3>
+          <p>{{ settings.full_address }}</p>
+          <a href="{{ settings.maps_url }}" class="btn btn-secondary" target="_blank">GET DIRECTIONS</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

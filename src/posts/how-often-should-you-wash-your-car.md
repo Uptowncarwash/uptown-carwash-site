@@ -5,7 +5,7 @@ description: "Expert advice on how often you should wash your car based on drivi
 keywords: "car wash frequency, how often wash car, San Diego car wash, car care tips"
 featured_image: "pexels-photo-6872150.jpeg"
 excerpt: "The answer depends on several factors including where you live, where you park, and how you use your vehicle. Here's our expert guide to keeping your car clean..."
-layout: post.njk
+layout: layouts/post.njk
 permalink: /blog/how-often-should-you-wash-your-car/
 ---
 

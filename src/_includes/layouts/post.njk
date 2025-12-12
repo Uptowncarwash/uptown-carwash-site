@@ -1,0 +1,23 @@
+﻿---
+layout: layouts/base.njk
+---
+<section class="page-hero">
+  <div class="container">
+    <h1>{{ title }}</h1>
+    <p>{{ date | dateFormat }}</p>
+  </div>
+</section>
+
+<article class="blog-post">
+  <div class="container">
+    {% if featured_image %}
+    <img src="{{ featured_image }}" alt="{{ title }}" class="post-featured-image">
+    {% endif %}
+    <div class="post-content">
+      {{ content | safe }}
+    </div>
+    <div class="post-footer">
+      <a href="/blog/" class="btn btn-secondary">&larr; Back to Blog</a>
+    </div>
+  </div>
+</article>

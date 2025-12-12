@@ -5,7 +5,7 @@ description: "San Diego's sunshine is tough on cars. Learn how to protect your p
 keywords: "sun damage car, UV protection car, San Diego car care, paint protection, interior protection"
 featured_image: "pexels-photo-193999.jpeg"
 excerpt: "San Diego's beautiful weather can be tough on your vehicle. UV rays can fade paint, crack dashboards, and damage interiors. Here's how to protect your investment..."
-layout: post.njk
+layout: layouts/post.njk
 permalink: /blog/protect-your-car-from-sun-damage/
 ---
 

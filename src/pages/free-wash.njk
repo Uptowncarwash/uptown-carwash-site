@@ -1,0 +1,71 @@
+﻿---
+layout: layouts/base.njk
+title: Free Wash Offer
+description: Get a FREE car wash at Uptown Car Wash San Diego! First-time customers receive a complimentary wash.
+permalink: /free-wash/
+---
+{% set fw = pages.free_wash %}
+
+<section class="page-hero">
+  <div class="container">
+    <h1>{{ fw.title }}</h1>
+    <p>{{ fw.subtitle }}</p>
+  </div>
+</section>
+
+<section class="free-wash-section">
+  <div class="container">
+    <div class="free-wash-card">
+      <div class="free-wash-details">
+        <h2>How to Redeem</h2>
+        <ol class="redeem-steps">
+          {% for step in fw.redeem_steps %}
+          <li>{{ step }}</li>
+          {% endfor %}
+        </ol>
+        <div class="offer-details">
+          <p><strong>Offer includes:</strong></p>
+          <ul>
+            {% for feature in fw.features %}
+            <li>{{ feature }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <form class="free-wash-form" action="https://formsubmit.co/{{ settings.formsubmit_email }}" method="POST">
+        <input type="hidden" name="_subject" value="New FREE WASH Signup - Uptown Car Wash">
+        <input type="hidden" name="_captcha" value="false">
+        <h3>Claim Your Free Wash</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name *</label>
+            <input type="text" id="firstName" name="firstName" required>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name *</label>
+            <input type="text" id="lastName" name="lastName" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">CLAIM FREE WASH</button>
+        <p class="form-note">* First-time customers only. One per household.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="cta-area">
+  <div class="container">
+    <h2>Find Us</h2>
+    <p>{{ settings.full_address }}</p>
+    <a href="{{ settings.maps_url }}" class="btn btn-primary" target="_blank">GET DIRECTIONS</a>
+  </div>
+</section>

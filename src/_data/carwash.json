@@ -1,0 +1,11 @@
+﻿{
+  "title": "Car Wash Services",
+  "subtitle": "Express exterior and full-service options",
+  "express": [
+    {"name": "Wash #1", "price": "$25.99", "features": ["Prep Wash", "Auto Wash", "Towel Dry", "Triple Foam", "Sealant Protectant", "Rim Cleaner", "Tire Shine", "Air Freshener", "Graphene Hand Wax"]},
+    {"name": "Wash #2", "price": "$22.99", "features": ["Prep Wash", "Auto Wash", "Towel Dry", "Triple Foam", "Sealant Protectant", "Rim Cleaner", "Tire Shine", "Air Freshener", "Carnauba Hand Wax"]},
+    {"name": "Wash #3", "price": "$20.99", "features": ["Prep Wash", "Auto Wash", "Towel Dry", "Triple Foam", "Sealant Protectant", "Rim Cleaner", "Tire Shine"]},
+    {"name": "Wash #4", "price": "$15.99", "features": ["Prep Wash", "Auto Wash", "Towel Dry", "Triple Foam", "Sealant Protectant"]},
+    {"name": "Wash #5", "price": "$11.99", "features": ["Prep Wash", "Auto Wash", "Towel Dry"]}
+  ]
+}

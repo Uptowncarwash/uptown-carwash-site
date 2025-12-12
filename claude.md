@@ -3,6 +3,8 @@
 ## Project Overview
 Static website for Uptown Car Wash, a full-service car wash and detailing business in San Diego, CA. In business since 1988.
 
+**Now powered by Eleventy (11ty) with Decap CMS for easy content editing.**
+
 ## Business Info
 - **Name**: Uptown Car Wash
 - **Address**: 4157 Normal St, San Diego, CA 92103
@@ -11,93 +13,146 @@ Static website for Uptown Car Wash, a full-service car wash and detailing busine
 - **Domain**: uptowncarwashsandiego.com
 
 ## Tech Stack
-- Static HTML/CSS/JavaScript (no framework)
-- CSS in `css/styles.css`
-- Netlify hosting with Netlify Identity (CMS admin)
-- Formspree for contact forms
-- Elfsight widget for Google Reviews
-- Google Analytics (G-YRRZRP31SW)
-- Google Maps embed
+- **Static Site Generator**: Eleventy (11ty) v2.0.1
+- **CMS**: Decap CMS (formerly Netlify CMS)
+- **Templating**: Nunjucks (.njk)
+- **Styling**: CSS in `css/styles.css`
+- **Hosting**: Netlify with Netlify Identity
+- **Forms**: FormSubmit.co (free, no account needed)
+- **Reviews Widget**: Elfsight Google Reviews
+- **Analytics**: Google Analytics (G-YRRZRP31SW)
 
 ## Project Structure
 ```
 /
-├── index.html              # Homepage
-├── about.html              # About page
-├── car-wash-services.html  # Car wash services
-├── detailing-services.html # Detailing services
-├── memberships.html        # Membership options
-├── unlimited-wash.html     # Wash club subscription
-├── gift-cards.html         # Gift cards
-├── free-wash.html          # Free wash promo
-├── contact.html            # Contact page
-├── blog.html               # Blog listing
-├── blog/                   # Blog posts
-├── coatings.html           # Ceramic coatings
-├── headlights.html         # Headlight restoration
-├── privacy.html            # Privacy policy
-├── terms.html              # Terms & conditions
-├── my-membership.html      # Member portal
-├── admin/                  # Netlify CMS admin
-├── css/                    # Stylesheets
-├── images/                 # Image assets
-└── Final_Colour.png        # Logo
+├── src/                        # Source files (Eleventy processes these)
+│   ├── _data/                  # Global data files (JSON)
+│   │   ├── settings.json       # Business info, hours, contact
+│   │   ├── memberships.json    # Wash club plans and pricing
+│   │   └── pages/              # Page-specific content
+│   │       ├── home.json
+│   │       ├── about.json
+│   │       └── free_wash.json
+│   ├── _includes/
+│   │   └── layouts/            # Nunjucks layouts
+│   │       ├── base.njk        # Base HTML template
+│   │       └── post.njk        # Blog post layout
+│   ├── pages/                  # Site pages (.njk templates)
+│   └── posts/                  # Blog posts (.md files)
+├── admin/                      # Decap CMS admin panel
+│   ├── index.html              # CMS entry point
+│   └── config.yml              # CMS configuration
+├── css/                        # Stylesheets
+├── images/                     # Image assets
+├── _site/                      # Built site (git-ignored)
+├── .eleventy.js                # Eleventy configuration
+├── package.json                # Node dependencies
+└── netlify.toml                # Netlify build config
 ```
 
-## Reference Files (Do Not Edit)
-- `webpage1.html` & `webpage1_files/` - Saved copy of original site
-- `Uptown Carwash _ Full-Service Car Detailers1.html` & `*_files/` - Original site assets
-- `uptownwebpage1-6.png` - Screenshots of original site for reference
+## Development Commands
+```bash
+npm install          # Install dependencies
+npm run build        # Build site to _site/
+npm start            # Start dev server at localhost:8080
+```
 
-## Key Components
+## CMS Content Editing
+The CMS is accessible at `/admin/` after deployment. Editable content:
 
-### Header Navigation
-- ABOUT, CAR WASH, DETAILING, GIFT CARDS, WASH CLUB, MEMBERSHIPS, BLOG, CONTACT
-- "FREE WASH" CTA button
+### Via CMS Admin Panel:
+- **Blog Posts**: Create, edit, delete blog articles
+- **Site Settings**: Business name, phone, email, hours, address
+- **Membership Plans**: Wash club pricing and features
+- **Homepage Content**: Hero text, services, "Who We Are" section
+- **About Page**: Our story, hybrid wash info, differentiators
+- **Free Wash Page**: Promo details and features
 
-### Homepage Sections
-1. Hero with rotating background slideshow (4s interval)
-2. Awards & Achievements
-3. Google Reviews (Elfsight widget)
-4. "Who We Are" section (blue background)
-5. Top Services grid
-6. Value proposition / Satisfaction guarantee
-7. Contact section with form and map
-8. Newsletter signup
-9. Footer
+### Pages (Edit .njk files directly):
+- Car Wash Services pricing
+- Detailing Services pricing
+- Ceramic Coatings packages
+- Headlight Restoration info
+- Gift Cards page
+- Contact page
+- Terms & Privacy pages
 
-### Business Hours
-**Summer (Mar-Nov)**: Mon-Sat 8AM-6PM, Sun 9AM-6PM
-**Winter (Nov-Mar)**: Mon-Sat 8AM-5PM, Sun 9AM-5PM
-**Closed**: Thanksgiving, Christmas, New Year's Day
+## Deployment to Netlify
 
-## Development Notes
-- Mobile-responsive with hamburger menu
-- Scroll-to-top button appears after 300px scroll
-- Forms submit to Formspree
-- Images sourced from original site and stock photos (Pexels, iStock)
+### Step 1: Push to GitHub
+```bash
+git add .
+git commit -m "Initial CMS setup"
+git push origin main
+```
 
-## Integrations Status
+### Step 2: Connect to Netlify
+1. Go to [app.netlify.com](https://app.netlify.com)
+2. Click "Add new site" > "Import an existing project"
+3. Connect your GitHub repo
+4. Build settings are auto-configured from netlify.toml
 
-| Integration                     | Status  | Location                                      |
+### Step 3: Enable Netlify Identity
+1. In Netlify dashboard, go to Site Settings > Identity
+2. Click "Enable Identity"
+3. Under Registration, select "Invite only"
+4. Invite yourself (your email) as a user
+5. Check your email and set up your password
+
+### Step 4: Enable Git Gateway
+1. Go to Site Settings > Identity > Services
+2. Click "Enable Git Gateway"
+3. This allows the CMS to commit changes to your repo
+
+### Step 5: Test CMS
+1. Visit `yoursite.netlify.app/admin/`
+2. Log in with your Netlify Identity credentials
+3. Test creating/editing a blog post
+
+## Key Data Files
+
+### settings.json
+Business-wide settings used across all pages:
+- Business name, phone, email, address
+- Hours (summer/winter schedules)
+- Google Maps URL
+- FormSubmit email endpoint
+
+### memberships.json
+Wash club membership data:
+- Plan names, pricing, features
+- "How it works" steps
+- Stripe payment links (empty - add when ready)
+
+## Forms
+All forms use FormSubmit.co:
+```html
+<form action="https://formsubmit.co/uptowncarwashsd@gmail.com" method="POST">
+```
+- No account needed
+- Emails go directly to the business email
+- Includes honeypot spam protection
+
+## Integrations
+
+| Integration                     | Status  | Notes                                         |
 |---------------------------------|---------|-----------------------------------------------|
-| Google Analytics (G-YRRZRP31SW) | Active  | All pages                                     |
-| ElfSight Google Reviews         | Active  | index.html                                    |
-| Square Appointments             | Active  | detailing-services.html, coatings.html, headlights.html |
-| Loopz Gift Cards                | Active  | gift-cards.html                               |
-| Constant Contact Newsletter     | Pending | index.html (endpoint TBD)                     |
+| Google Analytics (G-YRRZRP31SW) | Active  | In base.njk layout                            |
+| ElfSight Google Reviews         | Active  | Homepage                                      |
+| Square Appointments             | Active  | Detailing, Coatings, Headlights pages         |
+| Loopz Gift Cards                | Active  | Gift Cards page                               |
+| FormSubmit.co                   | Active  | All contact forms                             |
+| Decap CMS                       | Active  | Admin panel at /admin/                        |
+| Stripe Payments                 | Pending | Add payment links to memberships.json         |
 
-## External Services
-- **Netlify**: Hosting & Identity
-- **Formspree**: Form handling
-- **Elfsight**: Google Reviews widget (app ID: 3d9cc516-3b6d-427e-a6c1-60c2381e559e)
-- **Square**: Appointment booking for detailing services
-- **Loopz**: Gift card system
-- **Google**: Analytics, Maps embed
-- **Constant Contact**: Newsletter signup (pending)
+## Reference Files (Do Not Edit)
+- `*.html` files in root - Original static pages (kept for reference)
+- `webpage1_files/` - Original site assets
+- `deploy/` - Old deployment folder
 
-## Deployment Notes
-- **Recommended hosting**: Netlify
-- **Enable**: HTTPS/SSL
-- **CMS admin**: uptowncarwashsandiego.com/admin
-- **Post-launch**: Submit sitemap.xml to Google Search Console
+## Stripe Integration (Future)
+When ready to add Stripe payment links:
+1. Create products/prices in Stripe Dashboard
+2. Get the Payment Link URLs
+3. Edit `src/_data/memberships.json` via CMS or directly
+4. Add URLs to each plan's `stripe_link` field

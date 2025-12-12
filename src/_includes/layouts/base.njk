@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YRRZRP31SW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YRRZRP31SW');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ description or 'Uptown Car Wash San Diego - Full service car wash and detailing since 1988.' }}">
+  <meta name="robots" content="index, follow">
+  <title>{{ title }} | Uptown Car Wash San Diego</title>
+  <link rel="canonical" href="https://uptowncarwashsandiego.com/{{ page.url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://uptowncarwashsandiego.com/{{ page.url }}">
+  <meta property="og:title" content="{{ title }} | Uptown Car Wash San Diego">
+  <meta property="og:description" content="{{ description or 'San Diego full-service car wash since 1988.' }}">
+  <meta property="og:image" content="https://uptowncarwashsandiego.com/Final_Colour.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }} | Uptown Car Wash San Diego">
+  <meta name="twitter:description" content="{{ description or 'San Diego full-service car wash since 1988.' }}">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <img src="/Final_Colour.png" alt="Uptown Car Wash San Diego" class="logo-large">
+      </a>
+      <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="/about/">ABOUT</a></li>
+          <li class="nav-item"><a href="/car-wash-services/">CAR WASH</a></li>
+          <li class="nav-item"><a href="/detailing-services/">DETAILING</a></li>
+          <li class="nav-item"><a href="/gift-cards/">GIFT CARDS</a></li>
+          <li class="nav-item"><a href="/unlimited-wash/">WASH CLUB</a></li>
+          <li class="nav-item"><a href="/memberships/">MEMBERSHIPS</a></li>
+          <li class="nav-item"><a href="/blog/">BLOG</a></li>
+          <li class="nav-item"><a href="/contact/">CONTACT</a></li>
+        </ul>
+      </nav>
+      <a href="/free-wash/" class="btn btn-primary header-cta">FREE WASH</a>
+    </div>
+  </header>
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; {{ settings.year_established }} - 2025 Uptown Car Wash San Diego. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    if(menuBtn) {
+      menuBtn.addEventListener('click', () => {
+        nav.classList.toggle('nav-open');
+        menuBtn.classList.toggle('active');
+      });
+    }
+    // Netlify Identity redirect after login
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

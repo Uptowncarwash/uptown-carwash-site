@@ -1,12 +1,10 @@
-backend:
+﻿backend:
   name: git-gateway
   branch: main
 
-# Media files will be stored in the root folder
-media_folder: ""
-public_folder: "/"
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
 
-# Editorial workflow for draft/review/publish
 publish_mode: editorial_workflow
 
 collections:
@@ -18,9 +16,153 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
-      - { label: "Meta Description (for SEO)", name: "description", widget: "text", hint: "Brief description for search engines (150-160 characters)" }
-      - { label: "Keywords (for SEO)", name: "keywords", widget: "string", hint: "Comma-separated keywords" }
-      - { label: "Featured Image", name: "featured_image", widget: "image", hint: "Main image for the post" }
-      - { label: "Excerpt", name: "excerpt", widget: "text", hint: "Short preview shown on blog listing page" }
-      - { label: "Layout", name: "layout", widget: "hidden", default: "post.njk" }
+      - { label: "Meta Description (SEO)", name: "description", widget: "text", hint: "150-160 characters" }
+      - { label: "Keywords (SEO)", name: "keywords", widget: "string", hint: "Comma-separated" }
+      - { label: "Featured Image", name: "featured_image", widget: "image", required: false }
+      - { label: "Excerpt", name: "excerpt", widget: "text" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
       - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "general"
+        label: "Business Info"
+        file: "src/_data/settings.json"
+        fields:
+          - { label: "Business Name", name: "business_name", widget: "string" }
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Phone Link", name: "phone_link", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Address", name: "address", widget: "string" }
+          - { label: "City State Zip", name: "city_state_zip", widget: "string" }
+          - { label: "Full Address", name: "full_address", widget: "string" }
+          - label: "Hours"
+            name: "hours"
+            widget: "object"
+            fields:
+              - label: "Summer"
+                name: "summer"
+                widget: "object"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Mon-Sat", name: "mon_sat", widget: "string" }
+                  - { label: "Sunday", name: "sunday", widget: "string" }
+              - label: "Winter"
+                name: "winter"
+                widget: "object"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Mon-Sat", name: "mon_sat", widget: "string" }
+                  - { label: "Sunday", name: "sunday", widget: "string" }
+          - { label: "Holidays Closed", name: "holidays_closed", widget: "string" }
+          - { label: "Google Maps URL", name: "maps_url", widget: "string" }
+          - { label: "Year Established", name: "year_established", widget: "string" }
+          - { label: "FormSubmit Email", name: "formsubmit_email", widget: "string" }
+
+  - name: "memberships"
+    label: "Membership Plans"
+    files:
+      - name: "plans"
+        label: "Wash Club Plans"
+        file: "src/_data/memberships.json"
+        fields:
+          - label: "Intro Section"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - label: "Benefits"
+                name: "benefits"
+                widget: "list"
+                fields:
+                  - { label: "Icon", name: "icon", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "desc", widget: "string" }
+          - label: "Plans"
+            name: "plans"
+            widget: "list"
+            fields:
+              - { label: "Plan Name", name: "name", widget: "string" }
+              - { label: "Monthly Price", name: "price", widget: "string" }
+              - { label: "First Month Price", name: "first_month", widget: "string" }
+              - { label: "Featured", name: "featured", widget: "boolean", default: false }
+              - { label: "Badge Text", name: "badge", widget: "string", required: false }
+              - { label: "Features", name: "features", widget: "list", field: { label: "Feature", name: "feature", widget: "string" } }
+              - { label: "Stripe Payment Link", name: "stripe_link", widget: "string", required: false }
+          - label: "How It Works Steps"
+            name: "how_it_works"
+            widget: "list"
+            fields:
+              - { label: "Step Number", name: "step", widget: "number" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "desc", widget: "string" }
+
+  - name: "pages"
+    label: "Page Content"
+    files:
+      - name: "home"
+        label: "Homepage"
+        file: "src/_data/pages/home.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - label: "Who We Are"
+            name: "who_we_are"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Paragraph 1", name: "text1", widget: "text" }
+              - { label: "Paragraph 2", name: "text2", widget: "text" }
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "desc", widget: "string" }
+              - { label: "Image", name: "image", widget: "string" }
+              - { label: "Link", name: "link", widget: "string" }
+
+      - name: "about"
+        label: "About Page"
+        file: "src/_data/pages/about.json"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - label: "Our Story"
+            name: "our_story"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Paragraphs", name: "paragraphs", widget: "list", field: { label: "Paragraph", name: "p", widget: "text" } }
+          - label: "Hybrid Wash"
+            name: "hybrid_wash"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - { label: "Features", name: "features", widget: "list", field: { label: "Feature", name: "f", widget: "string" } }
+              - { label: "Conclusion", name: "conclusion", widget: "text" }
+          - label: "Differentiators"
+            name: "differentiators"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Items", name: "items", widget: "list", field: { label: "Item", name: "i", widget: "string" } }
+
+      - name: "free_wash"
+        label: "Free Wash Page"
+        file: "src/_data/pages/free_wash.json"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Wash Name", name: "wash_name", widget: "string" }
+          - { label: "Wash Value", name: "wash_value", widget: "string" }
+          - { label: "Redeem Steps", name: "redeem_steps", widget: "list", field: { label: "Step", name: "s", widget: "string" } }
+          - { label: "Features", name: "features", widget: "list", field: { label: "Feature", name: "f", widget: "string" } }

@@ -1,0 +1,35 @@
+﻿---
+layout: layouts/base.njk
+title: Blog
+description: Car care tips, news, and updates from Uptown Car Wash San Diego.
+permalink: /blog/
+---
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Blog</h1>
+    <p>Car care tips, news, and updates</p>
+  </div>
+</section>
+
+<section class="blog-listing">
+  <div class="container">
+    <div class="blog-grid">
+      {% for post in collections.posts | reverse %}
+      <article class="blog-card">
+        {% if post.data.featured_image %}
+        <img src="{{ post.data.featured_image }}" alt="{{ post.data.title }}">
+        {% endif %}
+        <div class="blog-card-content">
+          <time>{{ post.data.date | dateFormat }}</time>
+          <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+          <p>{{ post.data.excerpt }}</p>
+          <a href="{{ post.url }}" class="btn btn-secondary">Read More</a>
+        </div>
+      </article>
+      {% else %}
+      <p>No blog posts yet. Check back soon!</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>

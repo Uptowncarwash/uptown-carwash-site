@@ -2,14 +2,5 @@
   command = "npm run build"
   publish = "_site"
 
-# Redirect /blog.html to /blog/ for cleaner URLs
-[[redirects]]
-  from = "/blog.html"
-  to = "/blog/"
-  status = 301
-
-# Handle Netlify Identity for CMS login
-[[redirects]]
-  from = "/admin/*"
-  to = "/admin/index.html"
-  status = 200
+[build.environment]
+  NODE_VERSION = "18"

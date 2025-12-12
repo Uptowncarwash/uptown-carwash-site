@@ -1,0 +1,18 @@
+﻿{
+  "hero": {
+    "title": "Welcome to Uptown Car Wash",
+    "subtitle": "San Diego's Premier Full-Service Car Wash Since 1988"
+  },
+  "who_we_are": {
+    "label": "WHO WE ARE",
+    "title": "We are Uptown Car Wash",
+    "text1": "Uptown Car Wash & Detail Center is a locally owned, family-operated business proudly serving San Diego since 1988. As one of the last true full-service car washes in San Diegoâ€”and an award-winning oneâ€”we combine modern hybrid wash technology with hands-on expertise.",
+    "text2": "Our experienced team, including staff with 20+ years of service and a General Manager with 40+ years in the industry, delivers expert-level care for every vehicle."
+  },
+  "services": [
+    {"title": "Drive-Through Express", "desc": "Quick, quality exterior wash", "image": "Uptown Carwash _ Full-Service Car Detailers1_files/drive-through-touchless-car-wash.png", "link": "car-wash-services.html"},
+    {"title": "Full-Service Detailing", "desc": "Complete interior & exterior care", "image": "Uptown Carwash _ Full-Service Car Detailers1_files/inside-outside-detailing.png", "link": "detailing-services.html"},
+    {"title": "Large Vehicle Washes", "desc": "Trucks, SUVs, and oversized vehicles", "image": "Uptown Carwash _ Full-Service Car Detailers1_files/large-vehicle-washes.png", "link": "car-wash-services.html"},
+    {"title": "Unlimited Wash Club", "desc": "Wash as often as you like", "image": "Uptown Carwash _ Full-Service Car Detailers1_files/unlimited-car-wash-club-subscription.jpg", "link": "unlimited-wash.html"}
+  ]
+}

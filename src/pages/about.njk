@@ -1,0 +1,87 @@
+﻿---
+layout: layouts/base.njk
+title: About Us
+description: About Uptown Car Wash San Diego - Family-owned since 1988. Learn about our history, mission, and commitment to quality car wash and detailing services.
+permalink: /about/
+---
+{% set about = pages.about %}
+
+<section class="page-hero">
+  <div class="container">
+    <h1>{{ about.title }}</h1>
+    <p>{{ about.subtitle }}</p>
+  </div>
+</section>
+
+<section class="about-content">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <h2>{{ about.our_story.heading }}</h2>
+        {% for p in about.our_story.paragraphs %}
+        <p>{{ p | safe }}</p>
+        {% endfor %}
+
+        <h3>{{ about.hybrid_wash.heading }}</h3>
+        <p>{{ about.hybrid_wash.intro }}</p>
+        <ul class="about-services-list">
+          {% for feature in about.hybrid_wash.features %}
+          <li>{{ feature }}</li>
+          {% endfor %}
+        </ul>
+        <p>{{ about.hybrid_wash.conclusion }}</p>
+
+        <h3>Our Services</h3>
+        <h4>{{ about.services.express.heading }}</h4>
+        <ul class="about-services-list">
+          {% for item in about.services.express.items %}<li>{{ item }}</li>{% endfor %}
+        </ul>
+        <h4>{{ about.services.full_service.heading }}</h4>
+        <ul class="about-services-list">
+          {% for item in about.services.full_service.items %}<li>{{ item }}</li>{% endfor %}
+        </ul>
+        <h4>{{ about.services.detailing.heading }}</h4>
+        <ul class="about-services-list">
+          {% for item in about.services.detailing.items %}<li>{{ item }}</li>{% endfor %}
+        </ul>
+
+        <h3>{{ about.differentiators.heading }}</h3>
+        <ul class="about-services-list">
+          {% for item in about.differentiators.items %}<li>{{ item }}</li>{% endfor %}
+        </ul>
+      </div>
+      <div class="about-images">
+        {% for img in about.images %}
+        <img src="/{{ img.src }}" alt="{{ img.alt }}">
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="awards-area">
+  <div class="container">
+    <h3 class="awards-title">Awards & Achievements</h3>
+    <div class="awards-grid">
+      <div class="single-award"><img alt="best carwash award" src="/Uptown Carwash _ Full-Service Car Detailers1_files/best-car-wash-award-1.png"></div>
+      <div class="single-award"><img alt="best car wash award" src="/Uptown Carwash _ Full-Service Car Detailers1_files/best-car-wash-award-2.png"></div>
+      <div class="single-award"><img alt="best carwash award" src="/Uptown Carwash _ Full-Service Car Detailers1_files/best-car-wash-award-3.png"></div>
+      <div class="single-award"><img alt="best car wash award" src="/Uptown Carwash _ Full-Service Car Detailers1_files/best-car-wash-award-4.png"></div>
+      <div class="single-award"><img alt="best carwash award" src="/Uptown Carwash _ Full-Service Car Detailers1_files/best-car-wash-award-5.png"></div>
+      <div class="single-award"><img alt="best carwash award" src="/Uptown Carwash _ Full-Service Car Detailers1_files/best-car-wash-2020-award-1.png"></div>
+      <div class="single-award"><img alt="best carwash award" src="/Uptown Carwash _ Full-Service Car Detailers1_files/best-car-wash-2020-award-2.png"></div>
+      <div class="single-award"><img alt="best carwash award" src="/Uptown Carwash _ Full-Service Car Detailers1_files/uptown-24.png"></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-area">
+  <div class="container">
+    <h2>Ready for a Sparkling Clean Car?</h2>
+    <p>Visit us today or sign up for our Unlimited Wash Club</p>
+    <div class="cta-buttons">
+      <a href="{{ settings.maps_url }}" class="btn btn-primary" target="_blank">GET DIRECTIONS</a>
+      <a href="/unlimited-wash/" class="btn btn-secondary">JOIN WASH CLUB</a>
+    </div>
+  </div>
+</section>

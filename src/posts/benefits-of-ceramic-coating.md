@@ -5,7 +5,7 @@ description: "Learn why ceramic coating provides superior protection for your ve
 keywords: "ceramic coating San Diego, car paint protection, ceramic vs wax, auto detailing"
 featured_image: "pexels-photo-170811.jpeg"
 excerpt: "Ceramic coating offers superior protection compared to traditional wax. Learn why more San Diego car owners are making the switch to this advanced protection..."
-layout: post.njk
+layout: layouts/post.njk
 permalink: /blog/benefits-of-ceramic-coating/
 ---
 

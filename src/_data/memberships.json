@@ -1,0 +1,53 @@
+﻿{
+  "intro": {
+    "title": "Unlimited Wash Club",
+    "subtitle": "Wash as often as you like!",
+    "benefits": [
+      {"icon": "50%", "title": "Half Off First Month", "desc": "Save 50% on your first month's membership"},
+      {"icon": "âˆž", "title": "Unlimited Washes", "desc": "Wash as often as you like, every day if you want"},
+      {"icon": "âœ“", "title": "No Contract", "desc": "Cancel anytime, no long-term commitment"},
+      {"icon": "10%", "title": "Detailing Discount", "desc": "Members save 10% on all detailing services"}
+    ]
+  },
+  "plans": [
+    {
+      "name": "Plan #1",
+      "price": "$59.99",
+      "first_month": "$29.99",
+      "featured": true,
+      "badge": "BEST VALUE",
+      "features": ["Prep Wash", "Soft Foam Wash", "Air Dry + Hand Towel Drying", "Tri Foam Polish", "Ceramic Wax", "Wheel Cleaner", "Tire Shine", "Express Touch Discount", "10% Detailing Discount", "Hand-Applied Graphene Spray Wax"],
+      "stripe_link": ""
+    },
+    {
+      "name": "Plan #2",
+      "price": "$49.99",
+      "first_month": "$24.99",
+      "featured": false,
+      "features": ["Prep Wash", "Soft Foam Wash", "Air Dry + Hand Towel Drying", "Tri Foam Polish", "Ceramic Wax", "Wheel Cleaner", "Tire Shine", "Express Touch Discount", "10% Detailing Discount", "Hand-Applied Carnauba Spray Wax"],
+      "stripe_link": ""
+    },
+    {
+      "name": "Plan #3",
+      "price": "$39.99",
+      "first_month": "$19.99",
+      "featured": false,
+      "features": ["Prep Wash", "Soft Foam Wash", "Air Dry + Hand Towel Drying", "Tri Foam Polish", "Ceramic Wax", "Wheel Cleaner", "Tire Shine", "10% Detailing Discount"],
+      "stripe_link": ""
+    },
+    {
+      "name": "Plan #4",
+      "price": "$29.99",
+      "first_month": "$14.99",
+      "featured": false,
+      "features": ["Prep Wash", "Soft Foam Wash", "Air Dry + Hand Towel Drying", "Tri Foam Polish", "Ceramic Wax"],
+      "stripe_link": ""
+    }
+  ],
+  "how_it_works": [
+    {"step": 1, "title": "Sign Up", "desc": "Choose your plan and sign up in person or online"},
+    {"step": 2, "title": "Get Your Tag", "desc": "Receive your windshield RFID tag for automatic recognition"},
+    {"step": 3, "title": "Drive Through", "desc": "Just drive up and we'll recognize your vehicle automatically"},
+    {"step": 4, "title": "Enjoy!", "desc": "Wash as often as you like with no additional cost"}
+  ]
+}

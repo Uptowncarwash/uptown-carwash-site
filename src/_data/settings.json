@@ -1,0 +1,17 @@
+﻿{
+  "business_name": "Uptown Car Wash & Detail Center",
+  "phone": "(619) 297-9274",
+  "phone_link": "+16192979274",
+  "email": "uptowncarwashsd@gmail.com",
+  "address": "4157 Normal St",
+  "city_state_zip": "San Diego, CA 92103",
+  "full_address": "4157 Normal St, San Diego, CA 92103",
+  "hours": {
+    "summer": {"label": "Summer (Mar-Nov)", "mon_sat": "8 AM - 6 PM", "sunday": "9 AM - 6 PM"},
+    "winter": {"label": "Winter (Nov-Mar)", "mon_sat": "8 AM - 5 PM", "sunday": "9 AM - 5 PM"}
+  },
+  "holidays_closed": "Thanksgiving, Christmas, and New Year's Day",
+  "maps_url": "https://www.google.com/maps/search/?api=1&query=Uptown+Car+Wash+4157+Normal+St+San+Diego+CA+92103",
+  "year_established": "1988",
+  "formsubmit_email": "uptowncarwashsd@gmail.com"
+}

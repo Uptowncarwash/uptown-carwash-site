@@ -1,0 +1,60 @@
+﻿---
+layout: layouts/base.njk
+title: Memberships
+description: Uptown Car Wash San Diego Memberships - Join our Unlimited Wash Club or manage your membership.
+permalink: /memberships/
+---
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Memberships</h1>
+    <p>Join our Unlimited Wash Club or manage your account</p>
+  </div>
+</section>
+
+<section class="membership-section">
+  <div class="container">
+    <div class="membership-grid">
+      <div class="membership-card featured">
+        <h2>Join the Unlimited Wash Club</h2>
+        <p>Wash your car as often as you like for one low monthly price. Plans start at just $29.99/month.</p>
+        <ul class="membership-benefits">
+          <li>Unlimited washes every month</li>
+          <li>No long-term contract</li>
+          <li>Cancel anytime</li>
+          <li>50% off your first month</li>
+        </ul>
+        <a href="/unlimited-wash/" class="btn btn-primary">VIEW PLANS & JOIN</a>
+      </div>
+      <div class="membership-card">
+        <h2>Manage My Membership</h2>
+        <p>Already a member? Update your payment method, change vehicles, upgrade your plan, or cancel your membership.</p>
+        <ul class="membership-benefits">
+          <li>Update payment information</li>
+          <li>Change registered vehicle</li>
+          <li>Upgrade or downgrade plan</li>
+          <li>Contact support</li>
+        </ul>
+        <a href="/my-membership/" class="btn btn-secondary">MANAGE ACCOUNT</a>
+      </div>
+    </div>
+    <div class="membership-help">
+      <h2>Membership Questions?</h2>
+      <p>Our team is happy to help with any questions about the Unlimited Wash Club.</p>
+      <div class="help-options">
+        <div class="help-option">
+          <h3>By Phone</h3>
+          <p><a href="tel:{{ settings.phone_link }}">{{ settings.phone }}</a></p>
+        </div>
+        <div class="help-option">
+          <h3>By Email</h3>
+          <p><a href="mailto:{{ settings.email }}">{{ settings.email }}</a></p>
+        </div>
+        <div class="help-option">
+          <h3>In Person</h3>
+          <p>{{ settings.address }}<br>{{ settings.city_state_zip }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
