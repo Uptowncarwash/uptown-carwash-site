@@ -41,11 +41,8 @@ permalink: /unlimited-wash/
           <li>{{ feature }}</li>
           {% endfor %}
         </ul>
-        {% if plan.stripe_link %}
-        <a href="{{ plan.stripe_link }}" class="btn {% if plan.featured %}btn-primary{% else %}btn-secondary{% endif %}">SIGN UP</a>
-        {% else %}
-        <a href="/contact/" class="btn {% if plan.featured %}btn-primary{% else %}btn-secondary{% endif %}">SIGN UP</a>
-        {% endif %}
+        <span class="coming-soon-btn">Online Payment Coming Soon</span>
+        <p class="signup-note">Sign up in person at our location</p>
       </div>
       {% endfor %}
     </div>

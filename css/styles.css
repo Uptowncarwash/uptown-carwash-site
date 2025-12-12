@@ -352,6 +352,27 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transform: scale(1.05);
 }
 
+/* Coming Soon Button */
+.coming-soon-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #e5e7eb;
+  color: #6b7280;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  margin-top: 15px;
+}
+
+.signup-note {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 10px;
+  font-style: italic;
+}
+
 /* ============================================
    TESTIMONIALS
    ============================================ */
