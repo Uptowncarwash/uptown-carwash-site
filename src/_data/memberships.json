@@ -4,8 +4,8 @@
     "subtitle": "Wash as often as you like!",
     "benefits": [
       {"icon": "50%", "title": "Half Off First Month", "desc": "Save 50% on your first month's membership"},
-      {"icon": "âˆž", "title": "Unlimited Washes", "desc": "Wash as often as you like, every day if you want"},
-      {"icon": "âœ“", "title": "No Contract", "desc": "Cancel anytime, no long-term commitment"},
+      {"icon": "UNLIMITED", "title": "Unlimited Washes", "desc": "Wash as often as you like, every day if you want"},
+      {"icon": "NO CONTRACT", "title": "No Contract", "desc": "Cancel anytime, no long-term commitment"},
       {"icon": "10%", "title": "Detailing Discount", "desc": "Members save 10% on all detailing services"}
     ]
   },
