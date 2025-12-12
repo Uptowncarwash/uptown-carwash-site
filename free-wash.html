@@ -85,8 +85,9 @@
             </div>
           </div>
 
-          <form class="free-wash-form" action="https://formspree.io/f/uptowncarwashsd@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="New FREE WASH Signup - Uptown Car Wash">
+          <form class="free-wash-form" name="free-wash-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="free-wash-signup">
+            <input type="hidden" name="bot-field">
             <h3>Claim Your Free Wash</h3>
             <div class="form-row">
               <div class="form-group">
