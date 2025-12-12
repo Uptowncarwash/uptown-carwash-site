@@ -77,8 +77,27 @@ Static website for Uptown Car Wash, a full-service car wash and detailing busine
 - Forms submit to Formspree
 - Images sourced from original site and stock photos (Pexels, iStock)
 
+## Integrations Status
+
+| Integration                     | Status  | Location                                      |
+|---------------------------------|---------|-----------------------------------------------|
+| Google Analytics (G-YRRZRP31SW) | Active  | All pages                                     |
+| ElfSight Google Reviews         | Active  | index.html                                    |
+| Square Appointments             | Active  | detailing-services.html, coatings.html, headlights.html |
+| Loopz Gift Cards                | Active  | gift-cards.html                               |
+| Constant Contact Newsletter     | Pending | index.html (endpoint TBD)                     |
+
 ## External Services
 - **Netlify**: Hosting & Identity
 - **Formspree**: Form handling
 - **Elfsight**: Google Reviews widget (app ID: 3d9cc516-3b6d-427e-a6c1-60c2381e559e)
+- **Square**: Appointment booking for detailing services
+- **Loopz**: Gift card system
 - **Google**: Analytics, Maps embed
+- **Constant Contact**: Newsletter signup (pending)
+
+## Deployment Notes
+- **Recommended hosting**: Netlify
+- **Enable**: HTTPS/SSL
+- **CMS admin**: uptowncarwash.com/admin
+- **Post-launch**: Submit sitemap.xml to Google Search Console
