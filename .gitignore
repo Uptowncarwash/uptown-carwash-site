@@ -18,6 +18,14 @@ Uptown Carwash _ Full-Service Car Detailers1_files/
 
 # Screenshot references
 uptownwebpage*.png
+Untitled.png
+
+# Old backup and deploy folders
+backup/
+deploy/
+
+# PowerShell scripts (development only)
+*.ps1
 
 # Build artifacts
 _site/
@@ -37,3 +45,25 @@ npm-debug.log
 
 # Archives
 *.zip
+
+# Old static HTML files (now using Eleventy templates)
+/about.html
+/blog.html
+/car-wash-services.html
+/coatings.html
+/contact.html
+/detailing-services.html
+/free-wash.html
+/gift-cards.html
+/headlights.html
+/index.html
+/memberships.html
+/my-membership.html
+/privacy.html
+/terms.html
+/unlimited-wash.html
+
+# Development docs
+SETUP.md
+BLOG-USER-GUIDE.md
+claude.md
