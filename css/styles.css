@@ -1075,6 +1075,24 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   margin: 0 auto;
 }
 
+.member-portal-section {
+  margin-top: 50px;
+  padding-top: 50px;
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.member-portal-section h2 {
+  font-size: 28px;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+.member-portal-section p {
+  color: var(--color-gray);
+  margin-bottom: 30px;
+}
+
 .cta-area {
   background: var(--color-primary);
   color: var(--color-white);
