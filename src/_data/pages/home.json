@@ -1,7 +1,9 @@
 ﻿{
   "hero": {
     "title": "Welcome to Uptown Car Wash",
-    "subtitle": "San Diego's Premier Full-Service Car Wash Since 1988"
+    "subtitle": "San Diego's Premier Full-Service Car Wash Since 1988",
+    "tagline1": "Now with Exterior Only including Memberships!",
+    "tagline2": "New 6 Bay Professional Detailing Building"
   },
   "who_we_are": {
     "label": "WHO WE ARE",
