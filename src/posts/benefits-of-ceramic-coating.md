@@ -3,7 +3,7 @@ title: "Why Ceramic Coating is Worth the Investment"
 date: 2024-12-05
 description: "Learn why ceramic coating provides superior protection for your vehicle. Compare ceramic vs wax and discover the long-term benefits for San Diego drivers."
 keywords: "ceramic coating San Diego, car paint protection, ceramic vs wax, auto detailing"
-featured_image: "pexels-photo-170811.jpeg"
+featured_image: "/pexels-photo-170811.jpeg"
 excerpt: "Ceramic coating offers superior protection compared to traditional wax. Learn why more San Diego car owners are making the switch to this advanced protection..."
 layout: layouts/post.njk
 permalink: /blog/benefits-of-ceramic-coating/

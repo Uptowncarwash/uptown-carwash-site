@@ -3,7 +3,7 @@ title: "Protecting Your Car from San Diego's Sun"
 date: 2024-11-28
 description: "San Diego's sunshine is tough on cars. Learn how to protect your paint, interior, and dashboard from UV damage with these expert tips from Uptown Car Wash."
 keywords: "sun damage car, UV protection car, San Diego car care, paint protection, interior protection"
-featured_image: "pexels-photo-193999.jpeg"
+featured_image: "/pexels-photo-193999.jpeg"
 excerpt: "San Diego's beautiful weather can be tough on your vehicle. UV rays can fade paint, crack dashboards, and damage interiors. Here's how to protect your investment..."
 layout: layouts/post.njk
 permalink: /blog/protect-your-car-from-sun-damage/
