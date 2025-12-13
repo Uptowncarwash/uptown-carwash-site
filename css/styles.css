@@ -208,15 +208,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ============================================
    HERO - Rotating slideshow with crossfade
    ============================================ */
-.hero-area {
+.hero-slideshow {
   position: relative;
-  padding: 60px 0 80px;
   min-height: 500px;
   overflow: hidden;
 }
 
-/* Slideshow container */
-.hero-slideshow {
+/* Slides container */
+.hero-slideshow .slides {
   position: absolute;
   top: 0;
   left: 0;
@@ -226,7 +225,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 /* Individual slides */
-.hero-slide {
+.hero-slideshow .slide {
   position: absolute;
   top: 0;
   left: 0;
@@ -238,12 +237,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transition: opacity 1s ease-in-out;
 }
 
-.hero-slide.active {
+.hero-slideshow .slide.active {
   opacity: 1;
 }
 
 /* Dark overlay for text readability */
-.hero-area::before {
+.hero-slideshow::before {
   content: '';
   position: absolute;
   top: 0;
@@ -252,6 +251,41 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   bottom: 0;
   background: rgba(0, 0, 0, 0.35);
   z-index: 1;
+}
+
+/* Hero content overlay */
+.hero-slideshow .hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 500px;
+  padding: 60px 20px;
+  color: #fff;
+}
+
+.hero-slideshow .hero-content h1 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-slideshow .hero-content p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .hero-split {
@@ -559,6 +593,41 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transform: scale(1.05);
 }
 
+.service-card h3,
+.service-card p {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 0 20px;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  margin: 0;
+  z-index: 2;
+}
+
+.service-card h3 {
+  bottom: 45px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.service-card p {
+  bottom: 20px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  z-index: 1;
+}
+
 .service-overlay {
   position: absolute;
   bottom: 0;
@@ -762,6 +831,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    RESPONSIVE - Tablet
    ============================================ */
 @media (min-width: 768px) {
+  .hero-slideshow .hero-content h1 {
+    font-size: 42px;
+  }
+
   .awards-grid {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -866,8 +939,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     display: inline-block;
   }
 
-  .hero-content h1 {
-    font-size: 80px;
+  .hero-slideshow .hero-content h1 {
+    font-size: 48px;
   }
 
   .awards-grid {
