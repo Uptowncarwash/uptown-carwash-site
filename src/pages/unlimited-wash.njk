@@ -41,10 +41,29 @@ permalink: /unlimited-wash/
           <li>{{ feature }}</li>
           {% endfor %}
         </ul>
+        {% if plan.featured %}
+        <a href="#signup-plan1" class="btn btn-primary">SIGN UP NOW</a>
+        {% else %}
         <span class="coming-soon-btn">Online Payment Coming Soon</span>
         <p class="signup-note">Sign up in person at our location</p>
+        {% endif %}
       </div>
       {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="signup-section" id="signup-plan1">
+  <div class="container">
+    <h2>Sign Up for Plan #1 VIP Membership</h2>
+    <p>Complete your membership signup below</p>
+    <div class="signup-iframe-wrapper">
+      <iframe
+        src="https://app.flexwash.com/sign-up-portal?organizationId=79&carWashId=52&packageId=432&promotionId=259"
+        style="width: 100%; min-height: 600px; border: none;"
+        frameborder="0"
+        title="VIP Membership Signup">
+      </iframe>
     </div>
   </div>
 </section>
