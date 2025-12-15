@@ -741,6 +741,25 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   margin-top: 15px !important;
 }
 
+.newsletter-signup {
+  margin: 25px 0;
+  padding: 20px;
+  background: #f3f4f6;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.newsletter-signup h3 {
+  margin-bottom: 8px;
+  color: var(--color-primary);
+}
+
+.newsletter-signup p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
