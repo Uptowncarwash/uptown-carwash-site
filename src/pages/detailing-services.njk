@@ -318,9 +318,28 @@ permalink: /detailing-services/
       </form>
     </div>
 
-    <div class="booking-fallback">
-      <p>Prefer to book by phone?</p>
-      <a href="tel:+16192979274" class="btn btn-secondary">CALL (619) 297-9274</a>
+    <div class="booking-fallback same-day-notice">
+      <p><strong>Need a same-day appointment?</strong></p>
+      <p>Online booking requires at least 1 day advance notice. For same-day service, please call us directly:</p>
+      <a href="tel:+16192979274" class="btn btn-primary">CALL (619) 297-9274</a>
     </div>
   </div>
 </section>
+
+<script>
+// Set minimum date to tomorrow (prevent past and same-day bookings)
+document.addEventListener('DOMContentLoaded', function() {
+  const dateInput = document.getElementById('date');
+  if (dateInput) {
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    const minDate = tomorrow.toISOString().split('T')[0];
+    dateInput.setAttribute('min', minDate);
+
+    // Also set max date to 90 days out
+    const maxDate = new Date();
+    maxDate.setDate(maxDate.getDate() + 90);
+    dateInput.setAttribute('max', maxDate.toISOString().split('T')[0]);
+  }
+});
+</script>

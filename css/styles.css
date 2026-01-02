@@ -2213,6 +2213,22 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   text-align: center;
 }
 
+/* Same-day appointment notice */
+.same-day-notice {
+  background: rgba(255,255,255,0.1);
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 30px;
+}
+
+.same-day-notice p {
+  margin-bottom: 10px;
+}
+
+.same-day-notice p:last-of-type {
+  margin-bottom: 15px;
+}
+
 /* ============================================
    GIFT CARD PURCHASE SECTION (Loopz)
    ============================================ */
