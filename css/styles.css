@@ -394,6 +394,30 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transform: scale(1.05);
 }
 
+/* Featured Award (latest/newest) */
+.single-award.featured {
+  position: relative;
+}
+
+.single-award.featured img {
+  max-width: 140px;
+  filter: drop-shadow(0 4px 12px rgba(30, 64, 124, 0.25));
+}
+
+.single-award.featured::after {
+  content: "NEW";
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #1e407c;
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 10px;
+  letter-spacing: 0.5px;
+}
+
 /* Coming Soon Button */
 .coming-soon-btn {
   display: inline-block;
