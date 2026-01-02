@@ -2229,6 +2229,43 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   margin-bottom: 15px;
 }
 
+/* Booking Confirmation Message */
+.booking-confirmed {
+  text-align: center;
+  padding: 60px 30px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.booking-confirmed .confirmed-icon {
+  width: 80px;
+  height: 80px;
+  background: #22c55e;
+  color: #fff;
+  font-size: 48px;
+  line-height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+}
+
+.booking-confirmed h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.booking-confirmed p {
+  font-size: 16px;
+  margin-bottom: 12px;
+  opacity: 0.95;
+}
+
+.booking-confirmed a {
+  color: #fff;
+  text-decoration: underline;
+}
+
 /* ============================================
    GIFT CARD PURCHASE SECTION (Loopz)
    ============================================ */

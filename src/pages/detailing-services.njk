@@ -204,8 +204,17 @@ permalink: /detailing-services/
 <!-- Book Appointment -->
 <section class="booking-section" id="book">
   <div class="container">
-    <h2>Book Your Detailing Appointment</h2>
-    <p class="booking-intro">Schedule your appointment online. No payment required at booking.</p>
+    <div id="confirmed" class="booking-confirmed" style="display: none;">
+      <div class="confirmed-icon">✓</div>
+      <h2>Appointment Request Received!</h2>
+      <p>Thank you! We've sent a confirmation email to your inbox.</p>
+      <p>We will contact you within 24 hours to confirm your appointment time.</p>
+      <p><strong>Need to cancel?</strong> Call us at <a href="tel:+16192979274">(619) 297-9274</a> by 8 AM on your appointment day.</p>
+    </div>
+
+    <div id="booking-form-container">
+      <h2>Book Your Detailing Appointment</h2>
+      <p class="booking-intro">Schedule your appointment online. No payment required at booking.</p>
 
     <div class="booking-info">
       <div class="booking-policy">
@@ -225,8 +234,25 @@ permalink: /detailing-services/
         <input type="hidden" name="_subject" value="New Detailing Appointment Request - Uptown Car Wash">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="https://uptowncarwashsandiego.com/detailing-services/?booked=true">
-        <input type="hidden" name="Manager Reminder" value="Please check and confirm this appointment in your scheduling system. Log in at: https://squareup.com/appointments">
+        <input type="hidden" name="_next" value="https://uptowncarwashsandiego.com/detailing-services/?booked=true#confirmed">
+        <input type="hidden" name="_autoresponse" value="Thank you for your appointment request at Uptown Car Wash!
+
+We have received your detailing appointment request and will confirm your booking within 24 hours via email or phone.
+
+APPOINTMENT DETAILS:
+Please keep this email for your records. We will send a confirmation with your final appointment time.
+
+NEED TO CANCEL OR RESCHEDULE?
+Please let us know by 8:00 AM on the day of your appointment.
+- Call: (619) 297-9274
+- Email: uptowncarwashsd@gmail.com
+
+We look forward to seeing you!
+
+Uptown Car Wash
+4157 Normal St, San Diego, CA 92103
+(619) 297-9274">
+        <input type="hidden" name="Manager Reminder" value="Please check and confirm this appointment in your scheduling system.">
 
         <div class="form-row">
           <div class="form-group">
@@ -323,12 +349,22 @@ permalink: /detailing-services/
       <p>Online booking requires at least 1 day advance notice. For same-day service, please call us directly:</p>
       <a href="tel:+16192979274" class="btn btn-primary">CALL (619) 297-9274</a>
     </div>
+    </div><!-- end booking-form-container -->
   </div>
 </section>
 
 <script>
-// Set minimum date to tomorrow (prevent past and same-day bookings)
 document.addEventListener('DOMContentLoaded', function() {
+  // Check if returning from successful booking
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('booked') === 'true') {
+    document.getElementById('confirmed').style.display = 'block';
+    document.getElementById('booking-form-container').style.display = 'none';
+    // Scroll to confirmation
+    document.getElementById('confirmed').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // Set minimum date to tomorrow (prevent past and same-day bookings)
   const dateInput = document.getElementById('date');
   if (dateInput) {
     const tomorrow = new Date();
