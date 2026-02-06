@@ -5,7 +5,7 @@ description: Compare wax, ceramic, and graphene coatings to find the best
   protection for your vehicle’s paint, shine, and durability with expert
   insights from Uptown Car Wash San Diego.
 keywords: " Ceramic Caotings"
-featured_image: /images/uploads/..........jpg
+featured_image: /images/uploads/osb1.....jpg
 excerpt: Protecting your vehicle’s paint is more than a cosmetic choice it’s an
   investment in long-term value, appearance, and durability.
 layout: layouts/post.njk
