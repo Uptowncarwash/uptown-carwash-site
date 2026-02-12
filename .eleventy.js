@@ -12,6 +12,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("Uptown Carwash _ Full-Service Car Detailers1_files");
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("sitemap.xml");
+  eleventyConfig.addPassthroughCopy({"src/CNAME": "CNAME"});
 
   // Watch for changes
   eleventyConfig.addWatchTarget("./src/_data/");
