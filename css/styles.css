@@ -1341,6 +1341,18 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: var(--color-gray);
 }
 
+.pricing-table .service-features {
+  list-style: disc;
+  margin: 8px 0 0 18px;
+  padding: 0;
+  font-size: 13px;
+  color: var(--color-gray);
+}
+
+.pricing-table .service-features li {
+  margin-bottom: 4px;
+}
+
 .pricing-note {
   text-align: center;
   margin-top: 20px;
