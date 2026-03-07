@@ -1353,6 +1353,24 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   margin-bottom: 4px;
 }
 
+/* Fixed column widths for detailing tables so they align across sections */
+.detailing-table {
+  table-layout: fixed;
+  width: 100%;
+}
+.detailing-table th:nth-child(1),
+.detailing-table td:nth-child(1) { width: 28%; }
+.detailing-table th:nth-child(2),
+.detailing-table td:nth-child(2) { width: 10%; }
+.detailing-table th:nth-child(3),
+.detailing-table td:nth-child(3) { width: 15%; }
+.detailing-table th:nth-child(4),
+.detailing-table td:nth-child(4) { width: 17%; }
+.detailing-table th:nth-child(5),
+.detailing-table td:nth-child(5) { width: 16%; }
+.detailing-table th:nth-child(6),
+.detailing-table td:nth-child(6) { width: 14%; }
+
 .pricing-note {
   text-align: center;
   margin-top: 20px;
