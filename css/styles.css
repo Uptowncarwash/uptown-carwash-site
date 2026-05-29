@@ -418,6 +418,64 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   letter-spacing: 0.5px;
 }
 
+/* Top Local Workplace Award highlight */
+.workplace-award {
+  background: #1e0b3a;
+  padding: 50px 0;
+}
+
+.workplace-award-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.workplace-award-badge {
+  width: 180px;
+  height: 180px;
+  flex-shrink: 0;
+}
+
+.workplace-award-text {
+  flex: 1;
+  min-width: 260px;
+  color: #fff;
+}
+
+.workplace-award-eyebrow {
+  display: inline-block;
+  color: #a07cff;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.workplace-award-text h3 {
+  font-size: 26px;
+  margin: 0 0 10px;
+  color: #fff;
+}
+
+.workplace-award-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #d6cce8;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .workplace-award-card {
+    text-align: center;
+  }
+}
+
 /* Coming Soon Button */
 .coming-soon-btn {
   display: inline-block;
