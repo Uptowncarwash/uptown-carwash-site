@@ -17,14 +17,26 @@ permalink: /free-wash/
   <div class="container">
     <div class="free-wash-card">
       <div class="free-wash-details">
-        <h2>How to Redeem</h2>
+        <h2>How to Redeem Your Free Wash</h2>
         <ol class="redeem-steps">
           {% for step in fw.redeem_steps %}
           <li>{{ step }}</li>
           {% endfor %}
         </ol>
+
+        <div class="important-notes">
+          <h3>Important</h3>
+          <ul>
+            {% for note in fw.important_notes %}
+            <li>{{ note }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+
         <div class="offer-details">
-          <p><strong>Offer includes:</strong></p>
+          <p><strong>Enjoy Your Free {{ fw.wash_name }}</strong></p>
+          <p class="wash-value">({{ fw.wash_value }} Value)</p>
+          <p><strong>Includes:</strong></p>
           <ul>
             {% for feature in fw.features %}
             <li>{{ feature }}</li>
