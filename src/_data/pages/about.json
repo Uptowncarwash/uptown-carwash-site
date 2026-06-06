@@ -5,7 +5,7 @@
     "heading": "Our Story",
     "paragraphs": [
       "Uptown Car Wash & Detail Center is a locally owned, family-operated business proudly serving San Diego since 1988. For more than 35 years, we've remained committed to delivering exceptional service, quality care, and a superior clean for every vehicle that comes through our doors.",
-      "As one of the last true full-service car washes in San Diego—and an award-winning one—we continue to uphold the tradition of hands-on service. Many of our team members have been with us for over 20 years, and our General Manager brings 40+ years of industry experience, ensuring every customer receives expert-level attention and care."
+      "As one of the last true flex-serve car washes in San Diego—and an award-winning one—we continue to uphold the tradition of hands-on service. Many of our team members have been with us for over 20 years, and our General Manager brings 40+ years of industry experience, ensuring every customer receives expert-level attention and care."
     ]
   },
   "hybrid_wash": {
@@ -26,7 +26,7 @@
   },
   "differentiators": {
     "heading": "What Sets Us Apart",
-    "items": ["Family-owned and operated for 35+ years", "Award-winning customer service", "One of San Diego's last full-service car washes", "Hybrid wash system with touchless and soft-foam technology", "Eco-friendly, non-caustic cleaning products", "Experienced staff with decades of combined expertise", "Specialized care for all vehicle types, finishes, and interiors"]
+    "items": ["Family-owned and operated for 35+ years", "Award-winning customer service", "One of San Diego's last flex-serve car washes", "Hybrid wash system with touchless and soft-foam technology", "Eco-friendly, non-caustic cleaning products", "Experienced staff with decades of combined expertise", "Specialized care for all vehicle types, finishes, and interiors"]
   },
   "images": [
     {"src": "uptown-building-1.jpg", "alt": "Uptown Car Wash San Diego - Street View"},
