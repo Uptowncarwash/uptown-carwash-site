@@ -1,0 +1,63 @@
+---
+layout: layouts/base.njk
+title: Text Club Enrollment
+description: Join the Uptown Car Wash Text Club and be the first to know about special promotions, discounts, and events in San Diego.
+permalink: /text-club/
+---
+
+{#
+  ============================================================================
+  STEP TO FINISH THIS PAGE:
+  In FlexWash, open your Marketing / Single Use promotion, click the Embed
+  (iFrame) option, and copy ONLY the URL out of its src="..." attribute.
+  Paste that URL between the quotes below. Nothing else needs to change.
+  ============================================================================
+#}
+{% set flexwash_iframe_src = "https://app.flexwash.com/promotion-sign-up/promotion/2018" %}
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Join the Uptown Text Club</h1>
+    <p>Be the first to know about special promotions, discounts, and events at Uptown Car Wash</p>
+  </div>
+</section>
+
+<section class="legal-content">
+  <div class="container">
+    <div class="legal-text" style="max-width:720px;margin:0 auto;">
+
+      <p>Sign up below to get exclusive offers sent straight to your phone — starting with a discount on
+      your next wash.</p>
+
+      {% if flexwash_iframe_src %}
+      <div class="text-club-embed" style="position:relative;width:100%;margin:2rem 0;">
+        <iframe
+          src="{{ flexwash_iframe_src }}"
+          title="Uptown Car Wash Text Club enrollment form"
+          style="width:100%;min-height:500px;border:0;display:block;"
+          loading="lazy"></iframe>
+      </div>
+      {% else %}
+      <div style="margin:2rem 0;padding:1.25rem;border:3px dashed #c00;background:#fff4f4;color:#900;">
+        <strong>NOT LIVE YET — FlexWash form not embedded.</strong>
+        Paste the promotion iFrame URL into <code>flexwash_iframe_src</code> at the top of
+        <code>src/pages/text-club.njk</code>, then rebuild. Do not submit this page to Twilio
+        until the form renders here.
+      </div>
+      {% endif %}
+
+      <p style="font-size:0.95rem;line-height:1.6;margin-top:1.5rem;">
+        By submitting this form and signing up for texts you consent to receive marketing messages
+        (promos &amp; reminders) from Uptown Car Wash. Consent is not a condition of purchase.
+        Msg &amp; data rates may apply. Msg frequency varies. Unsubscribe anytime by replying STOP.
+        <a href="/privacy/">Privacy Policy here</a>
+      </p>
+
+      <p style="font-size:0.95rem;">Questions? Call us at
+        <a href="tel:{{ settings.phone_link }}">{{ settings.phone }}</a> or email
+        <a href="mailto:{{ settings.email }}">{{ settings.email }}</a>.
+      </p>
+
+    </div>
+  </div>
+</section>
