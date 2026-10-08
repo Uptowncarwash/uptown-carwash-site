@@ -2352,7 +2352,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 /* ============================================
-   GIFT CARD PURCHASE SECTION (Loopz)
+   GIFT CARD PURCHASE SECTION (FlexWash)
    ============================================ */
 .gift-card-purchase {
   padding: 60px 0;
@@ -2414,7 +2414,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   gap: 20px;
 }
 
-/* Loopz widget container - responsive */
+/* Gift card widget container - responsive */
 .gift-card-widget iframe {
   width: 100%;
   min-height: 500px;
