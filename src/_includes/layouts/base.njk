@@ -94,6 +94,7 @@
   <meta name="twitter:description" content="{{ description or 'San Diego flex-serve car wash since 1988 — express exterior and full service.' }}">
 </head>
 <body>
+  <a href="#main" class="skip-link">Skip to main content</a>
   <header class="header">
     <div class="container header-inner">
       <a href="/" class="logo">
@@ -118,7 +119,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main" tabindex="-1">
     {{ content | safe }}
   </main>
 

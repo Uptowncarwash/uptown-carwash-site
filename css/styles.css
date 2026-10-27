@@ -10,7 +10,7 @@
   --color-primary-dark: #152a45;
 
   /* Orange for buttons - KEPT */
-  --color-accent: #ea580c;
+  --color-accent: #c2410c; /* was #ea580c; darkened to 5.2:1 on white (WCAG AA) */
   --color-accent-dark: #c2410c;
 
   /* Text colors */
@@ -1986,7 +1986,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .help-option a {
-  color: var(--color-accent);
+  color: #fb923c; /* light orange: 5.1:1 on the navy panel */
 }
 
 .business-hours-mini {
@@ -3138,4 +3138,44 @@ button,
 .directions-content .btn-large {
   padding: 1rem 2.5rem;
   font-size: 1.1rem;
+}
+
+/* Accessibility: keyboard users can jump past the navigation (WCAG 2.4.1) */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 10000;
+  padding: 12px 20px;
+  background: #000;
+  color: #fff;
+  font-weight: 600;
+}
+.skip-link:focus {
+  left: 16px;
+  top: 16px;
+}
+
+/* White outline buttons sitting on light sections were white-on-white */
+.blog-listing .btn-secondary,
+.blog-post .btn-secondary,
+.alt-bg .btn-secondary,
+.contact-page-content .btn-secondary,
+.membership-section .btn-secondary {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* Visible keyboard focus everywhere (WCAG 2.4.7); mouse clicks stay outline-free */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid #fb923c !important;
+  outline-offset: 2px;
+}
+main:focus-visible {
+  outline: none !important;
 }
