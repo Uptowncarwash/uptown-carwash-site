@@ -119,8 +119,8 @@ permalink: /
           <address>{{ settings.full_address }}</address>
         </div>
         <div class="contact-hours">
-          <p><strong>Monday to Saturday:</strong> {{ settings.hours.summer.mon_sat }}</p>
-          <p><strong>Sunday:</strong> {{ settings.hours.summer.sunday }}</p>
+          <p><strong>{{ settings.hours.summer.label }}:</strong> Mon-Sat {{ settings.hours.summer.mon_sat }} &middot; Sun {{ settings.hours.summer.sunday }}</p>
+          <p><strong>{{ settings.hours.winter.label }}:</strong> Mon-Sat {{ settings.hours.winter.mon_sat }} &middot; Sun {{ settings.hours.winter.sunday }}</p>
           <p class="holidays-label">Holidays Closed:</p>
           <p>{{ settings.holidays_closed }}</p>
         </div>
